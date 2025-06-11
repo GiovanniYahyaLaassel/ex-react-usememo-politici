@@ -1,7 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState } from "react";
+import { getPoliticians } from "./services/api";
+
 
 function App() {
+  const [politicians, setPoliticians] = useState([]);
+
+  useEffect(() => {
+    getPoliticians()
+      .then((res) => {
+        console.log('Dati ricevuti:', res.data);
+        setPoliticians(res.data);
+      })
+      .catch((err) => {
+        console.error('Errore nella chiamata api:', err);
+      })
+  }, []);
 
   return (
 
