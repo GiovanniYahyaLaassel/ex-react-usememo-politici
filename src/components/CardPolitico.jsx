@@ -1,6 +1,7 @@
-// Componente per mostrare un singolo politico 
+import React from "react";
 
-function cardPolitico ({name, image, position, biography }) {
+// Componente per mostrare un singolo politico 
+function CardPolitico ({name, image, position, biography }) {
     
     return (
         <div className="card">
@@ -13,4 +14,4 @@ function cardPolitico ({name, image, position, biography }) {
     );
 }
 
-export default cardPolitico;
+export default React.memo( CardPolitico );

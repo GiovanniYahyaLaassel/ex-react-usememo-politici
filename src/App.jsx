@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPoliticians } from "./services/api";
 import CardPolitico from "./components/CardPolitico";
+import './App.css';
 
 
 function App() {
